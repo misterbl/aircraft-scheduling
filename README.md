@@ -10,7 +10,7 @@ Users can click on an aircraft to see its available flights.
 
 Users can click on a flight in the flights list to add it to the rotation.
 
-Users can click on flight in the rotation to remove it
+Users can click on a flight in the rotation to remove it
 
 A 24h aircraft timeline is shown below the rotation table. Scheduled service in green, turnaround time in red, idle time in grey.
 
