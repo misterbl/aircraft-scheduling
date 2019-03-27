@@ -4,7 +4,7 @@
 
 This app allows users to create a rotation for a specific aircraft.
 
-Hovering the <img src="./src/assets/information.svg"  width="15" height="15" /> next to the title shows information about using the app.
+Hovering the i icon next to the title shows information about using the app.
 
 Users can click on an aircraft to see its available flights.
 
