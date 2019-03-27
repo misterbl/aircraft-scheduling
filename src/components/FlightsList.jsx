@@ -18,7 +18,6 @@ class FlightsList extends PureComponent {
               <Flight
                 key={`${rotation ? "rotation: " : ""}${flight.id}`}
                 flight={flight}
-                usage="%used"
                 onSelectFlight={onSelectFlight}
                 onRemoveFlight={onRemoveFlight}
                 rotation={rotation}

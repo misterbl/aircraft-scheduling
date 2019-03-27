@@ -1,14 +1,20 @@
 import * as React from "react";
 import { shallow } from "enzyme";
-import Aircraft from "../Aircraft";
+import AirCraftsList from "../AirCraftsList";
 
-describe("Aircraft", () => {
+describe("AirCraftsList", () => {
   const props = {
-    aircraft: { ident: "1234" },
-    totalAircraftUse: 10
+    aircraftList: [{ ident: "1234" }],
+    totalAircraftUse: jest.fn(() => 42),
+    onSelectAircraft: jest.fn()
   };
-  const wrapper = shallow(<Aircraft {...props} />);
+  const wrapper = shallow(<AirCraftsList {...props} />);
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
+  });
+  it("calls onSelectAircraft onSelectAircraft click", () => {
+    const airCraft = wrapper.find("AirCraft");
+    airCraft.simulate("selectAircraft");
+    expect(props.onSelectAircraft).toHaveBeenCalled();
   });
 });

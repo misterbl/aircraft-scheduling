@@ -12,7 +12,8 @@ describe("Timeline", () => {
         destination: "destination",
         readable_arrival: "readable_arrival",
         departuretime: 1233,
-        arrivaltime: 2500
+        arrivaltime: 2500,
+        timePercentage: 23
       }
     ]
   };

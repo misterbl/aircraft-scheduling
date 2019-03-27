@@ -17,8 +17,10 @@ class App extends Component {
     selectedFlight: null,
     rotation: [],
     flyingTimesList: [],
-    loading: false
+    loading: false,
+    fatalError: false
   };
+
   componentDidMount() {
     this.getAircrafts();
   }
@@ -60,10 +62,10 @@ class App extends Component {
     this.setState({ loading: true });
     const flyingTime =
       selectedFlight.arrivaltime - selectedFlight.departuretime;
-    const timePercentage = await calculatePercentage(flyingTime);
+    const timePercentage = calculatePercentage(flyingTime);
     const updatedSelectedFlight = { ...selectedFlight, timePercentage };
-    this.setState({ selectedFlight: updatedSelectedFlight });
-    await this.addToRotation();
+    await this.setState({ selectedFlight: updatedSelectedFlight });
+    this.addToRotation();
   };
 
   getTotalAircraftUse = () =>
@@ -76,50 +78,50 @@ class App extends Component {
 
   addToRotation = async () => {
     const { rotation: rotationState, selectedFlight } = this.state;
-
     const updatedRotation = rotationState.concat(selectedFlight);
     const rotation = sortArray(updatedRotation, "departuretime");
 
-    const isFlightJourneyEligible = await this.checkFlightJourney(rotation);
-    const isFlightTimeEligible = await this.checkFlightTime();
+    const isFlightJourneyEligible = this.checkFlightJourney(rotation);
+    const isFlightTimeEligible = this.checkFlightTime();
     if (
       rotationState.length === 0 ||
       (rotationState.length > 0 &&
         isFlightTimeEligible &&
         isFlightJourneyEligible)
     ) {
-      this.setState({ rotation });
+      await this.setState({ rotation });
       this.getTotalAircraftUse();
-      await this.addTurnAround();
+      this.addTurnAround();
       this.removeFromFlightsList();
-      this.setState({ loading: false });
+      await this.setState({ loading: false });
     } else {
       alert(
         "this flight doesn't fit this rotation, choose another flight or remove the conflicting flight(s) from the rotation"
       );
-      this.setState({ loading: false });
+      await this.setState({ loading: false });
     }
   };
+
   removeFromFlightsList = async () => {
-    this.setState({ loading: false });
     const { flightsList: flightsListState, selectedFlight } = this.state;
-    const flightsList = await flightsListState.filter(flight => {
-      return flight.id !== selectedFlight.id;
-    });
-    this.setState({ flightsList });
+    const flightsList = flightsListState.filter(
+      flight => flight.id !== selectedFlight.id
+    );
+    await this.setState({ loading: false, flightsList });
   };
+
   prevFlight = (list, index) => list[index - 1] && list[index - 1];
 
   nextFlight = (list, index) => list[index + 1] && list[index + 1];
 
   addToFlyingTimeList = async (list, flight) => {
-    const updatedList = await list.concat(flight);
-    const resultList = await sortArray(updatedList, "departuretime");
-    this.setState({ flyingTimesList: resultList });
+    const updatedList = list.concat(flight);
+    const resultList = sortArray(updatedList, "departuretime");
+    await this.setState({ flyingTimesList: resultList });
     return resultList;
   };
 
-  createTurnaround = (departure, arrival) => {
+  createTurnaround = async (departure, arrival) => {
     const flyingTime = departure - arrival;
     const timePercentage = calculatePercentage(flyingTime);
     const turnaround = {
@@ -128,7 +130,7 @@ class App extends Component {
       turnaround: true,
       timePercentage
     };
-    this.addToFlyingTimeList(this.state.flyingTimesList, turnaround);
+    await this.addToFlyingTimeList(this.state.flyingTimesList, turnaround);
   };
 
   addTurnAround = async () => {
@@ -181,25 +183,24 @@ class App extends Component {
     const prevFlight = this.prevFlight(rotation, flightIndex);
     const nextFlight = this.nextFlight(rotation, flightIndex);
 
-    if (!prevFlight) {
+    if (
+      !prevFlight ||
+      (prevFlight && prevFlight.destination === selectedFlight.origin)
+    ) {
       noConflictWithPrev = true;
     }
-    if (prevFlight && prevFlight.destination === selectedFlight.origin) {
-      noConflictWithPrev = true;
-    }
-    if (!nextFlight) {
-      noConflictWithNext = true;
-    }
-    if (nextFlight && nextFlight.origin === selectedFlight.destination) {
+    if (
+      !nextFlight ||
+      (nextFlight && nextFlight.origin === selectedFlight.destination)
+    ) {
       noConflictWithNext = true;
     }
     return noConflictWithPrev && noConflictWithNext;
   };
 
   onRemoveFlight = async selectedFlight => {
-    this.setState({ loading: true });
-    await this.setState({ selectedFlight });
-    await this.removeFromRotation();
+    await this.setState({ loading: true, selectedFlight });
+    this.removeFromRotation();
     this.removeFromFlyingTime();
   };
 
@@ -213,11 +214,11 @@ class App extends Component {
       flight => flight.id !== selectedFlight.id
     );
     const updatedFlightList = flightsListState.concat(selectedFlight);
-    const flightsList = await sortArray(updatedFlightList, "origin");
-    this.setState({ rotation, flightsList });
+    const flightsList = sortArray(updatedFlightList, "origin");
+    await this.setState({ rotation, flightsList });
   };
 
-  removeFromFlyingTime = () => {
+  removeFromFlyingTime = async () => {
     const {
       flyingTimesList: flyingTimesListState,
       selectedFlight
@@ -226,30 +227,26 @@ class App extends Component {
     const flightIndex = flyingTimesListState.indexOf(selectedFlight);
     const prevFlight = this.prevFlight(flyingTimesListState, flightIndex);
     const nextFlight = this.nextFlight(flyingTimesListState, flightIndex);
+
     if (prevFlight && prevFlight.turnaround) {
-      this.setState(state => {
-        flyingTimesList = state.flyingTimesList.filter(
-          flight => flight.id !== prevFlight.id
-        );
-        this.setState({ loading: false });
-        return { flyingTimesList };
-      });
+      flyingTimesList = flyingTimesListState.filter(
+        flight => flight.id !== prevFlight.id
+      );
+      await this.setState({ flyingTimesList, loading: false });
     }
+
     if (nextFlight && nextFlight.turnaround) {
-      this.setState(state => {
-        flyingTimesList = state.flyingTimesList.filter(
-          flight => flight.id !== nextFlight.id
-        );
-        this.setState({ loading: false });
-        return { flyingTimesList };
-      });
+      flyingTimesList = flyingTimesListState.filter(
+        flight => flight.id !== nextFlight.id
+      );
+      await this.setState({ flyingTimesList, loading: false });
     }
-    this.setState(state => {
+
+    await this.setState(state => {
       flyingTimesList = state.flyingTimesList.filter(
         flight => flight.id !== state.selectedFlight.id
       );
-      this.setState({ loading: false });
-      return { flyingTimesList };
+      return { flyingTimesList, loading: false };
     });
   };
 
@@ -259,11 +256,17 @@ class App extends Component {
       flightsList,
       rotation,
       flyingTimesList,
-      loading
+      loading,
+      fatalError
     } = this.state;
 
     return (
       <div className="text-center">
+        {fatalError && (
+          <div className="alert alert-danger" role="alert">
+            An error occurred. Please try again.
+          </div>
+        )}
         {loading && (
           <img
             className="loading-indicator"

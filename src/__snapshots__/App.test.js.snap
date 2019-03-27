@@ -31,15 +31,38 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
-          className="mt-15 text-center"
-        >
-          Aircraft scheduling
-        </h1>,
-        <Instructions />,
+        false,
+        <img
+          alt="loading indicator"
+          className="loading-indicator"
+          src="planeGif.gif"
+        />,
         <div
-          className="d-flex mt-35"
+          className="d-inline-block"
         >
+          <h1
+            className="mt-15 text-center"
+          >
+            Aircraft scheduling
+          </h1>
+        </div>,
+        <div
+          className="info-icon"
+        >
+          <img
+            alt="information icon"
+            src="information.svg"
+          />
+          <Instructions />
+        </div>,
+        <div
+          className="d-flex mt-35 justify-content-center"
+        >
+          <AirCraftsList
+            aircraftList={Array []}
+            onSelectAircraft={[Function]}
+            totalAircraftUse={[Function]}
+          />
           <div
             className="d-flex flex-column"
           >
@@ -48,35 +71,58 @@ ShallowWrapper {
               onRemoveFlight={[Function]}
               rotation={true}
             />
-            <Timeline
-              flyingTimesList={Array []}
-            />
           </div>
+          <FlightsList
+            flightsList={Array []}
+            onRemoveFlight={[Function]}
+            onSelectFlight={[Function]}
+          />
         </div>,
       ],
+      "className": "text-center",
     },
     "ref": null,
     "rendered": Array [
+      false,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Aircraft scheduling",
-          "className": "mt-15 text-center",
+          "alt": "loading indicator",
+          "className": "loading-indicator",
+          "src": "planeGif.gif",
         },
         "ref": null,
-        "rendered": "Aircraft scheduling",
-        "type": "h1",
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "host",
+        "props": Object {
+          "children": <h1
+            className="mt-15 text-center"
+          >
+            Aircraft scheduling
+          </h1>,
+          "className": "d-inline-block",
+        },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Aircraft scheduling",
+            "className": "mt-15 text-center",
+          },
+          "ref": null,
+          "rendered": "Aircraft scheduling",
+          "type": "h1",
+        },
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -84,7 +130,51 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            null,
+            <img
+              alt="information icon"
+              src="information.svg"
+            />,
+            <Instructions />,
+          ],
+          "className": "info-icon",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "information icon",
+              "src": "information.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <AirCraftsList
+              aircraftList={Array []}
+              onSelectAircraft={[Function]}
+              totalAircraftUse={[Function]}
+            />,
             <div
               className="d-flex flex-column"
             >
@@ -93,17 +183,30 @@ ShallowWrapper {
                 onRemoveFlight={[Function]}
                 rotation={true}
               />
-              <Timeline
-                flyingTimesList={Array []}
-              />
             </div>,
-            null,
+            <FlightsList
+              flightsList={Array []}
+              onRemoveFlight={[Function]}
+              onSelectFlight={[Function]}
+            />,
           ],
-          "className": "d-flex mt-35",
+          "className": "d-flex mt-35 justify-content-center",
         },
         "ref": null,
         "rendered": Array [
-          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "aircraftList": Array [],
+              "onSelectAircraft": [Function],
+              "totalAircraftUse": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
           Object {
             "instance": null,
             "key": undefined,
@@ -115,9 +218,7 @@ ShallowWrapper {
                   onRemoveFlight={[Function]}
                   rotation={true}
                 />,
-                <Timeline
-                  flyingTimesList={Array []}
-                />,
+                false,
               ],
               "className": "d-flex flex-column",
             },
@@ -136,21 +237,23 @@ ShallowWrapper {
                 "rendered": null,
                 "type": [Function],
               },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "flyingTimesList": Array [],
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+              false,
             ],
             "type": "div",
           },
-          null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "flightsList": Array [],
+              "onRemoveFlight": [Function],
+              "onSelectFlight": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": "div",
       },
@@ -164,15 +267,38 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
-            className="mt-15 text-center"
-          >
-            Aircraft scheduling
-          </h1>,
-          <Instructions />,
+          false,
+          <img
+            alt="loading indicator"
+            className="loading-indicator"
+            src="planeGif.gif"
+          />,
           <div
-            className="d-flex mt-35"
+            className="d-inline-block"
           >
+            <h1
+              className="mt-15 text-center"
+            >
+              Aircraft scheduling
+            </h1>
+          </div>,
+          <div
+            className="info-icon"
+          >
+            <img
+              alt="information icon"
+              src="information.svg"
+            />
+            <Instructions />
+          </div>,
+          <div
+            className="d-flex mt-35 justify-content-center"
+          >
+            <AirCraftsList
+              aircraftList={Array []}
+              onSelectAircraft={[Function]}
+              totalAircraftUse={[Function]}
+            />
             <div
               className="d-flex flex-column"
             >
@@ -181,35 +307,58 @@ ShallowWrapper {
                 onRemoveFlight={[Function]}
                 rotation={true}
               />
-              <Timeline
-                flyingTimesList={Array []}
-              />
             </div>
+            <FlightsList
+              flightsList={Array []}
+              onRemoveFlight={[Function]}
+              onSelectFlight={[Function]}
+            />
           </div>,
         ],
+        "className": "text-center",
       },
       "ref": null,
       "rendered": Array [
+        false,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Aircraft scheduling",
-            "className": "mt-15 text-center",
+            "alt": "loading indicator",
+            "className": "loading-indicator",
+            "src": "planeGif.gif",
           },
           "ref": null,
-          "rendered": "Aircraft scheduling",
-          "type": "h1",
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "host",
+          "props": Object {
+            "children": <h1
+              className="mt-15 text-center"
+            >
+              Aircraft scheduling
+            </h1>,
+            "className": "d-inline-block",
+          },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Aircraft scheduling",
+              "className": "mt-15 text-center",
+            },
+            "ref": null,
+            "rendered": "Aircraft scheduling",
+            "type": "h1",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -217,7 +366,51 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              null,
+              <img
+                alt="information icon"
+                src="information.svg"
+              />,
+              <Instructions />,
+            ],
+            "className": "info-icon",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "information icon",
+                "src": "information.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <AirCraftsList
+                aircraftList={Array []}
+                onSelectAircraft={[Function]}
+                totalAircraftUse={[Function]}
+              />,
               <div
                 className="d-flex flex-column"
               >
@@ -226,17 +419,30 @@ ShallowWrapper {
                   onRemoveFlight={[Function]}
                   rotation={true}
                 />
-                <Timeline
-                  flyingTimesList={Array []}
-                />
               </div>,
-              null,
+              <FlightsList
+                flightsList={Array []}
+                onRemoveFlight={[Function]}
+                onSelectFlight={[Function]}
+              />,
             ],
-            "className": "d-flex mt-35",
+            "className": "d-flex mt-35 justify-content-center",
           },
           "ref": null,
           "rendered": Array [
-            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "aircraftList": Array [],
+                "onSelectAircraft": [Function],
+                "totalAircraftUse": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
             Object {
               "instance": null,
               "key": undefined,
@@ -248,9 +454,7 @@ ShallowWrapper {
                     onRemoveFlight={[Function]}
                     rotation={true}
                   />,
-                  <Timeline
-                    flyingTimesList={Array []}
-                  />,
+                  false,
                 ],
                 "className": "d-flex flex-column",
               },
@@ -269,21 +473,23 @@ ShallowWrapper {
                   "rendered": null,
                   "type": [Function],
                 },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "flyingTimesList": Array [],
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                false,
               ],
               "type": "div",
             },
-            null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "flightsList": Array [],
+                "onRemoveFlight": [Function],
+                "onSelectFlight": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
           "type": "div",
         },

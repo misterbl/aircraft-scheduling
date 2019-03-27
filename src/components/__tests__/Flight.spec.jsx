@@ -21,13 +21,16 @@ describe("Flight", () => {
 
   it("calls onSelectFlight if rotation is undefined", () => {
     const li = wrapper.find("li");
-    li.simulate("doubleClick");
+    li.simulate("click");
     expect(props.onSelectFlight).toHaveBeenCalled();
   });
-  it("calls onRemoveFlight if rotation is true", () => {
-    wrapper.setProps({ rotation: true });
-    const li = wrapper.find("li");
-    li.simulate("doubleClick");
-    expect(props.onRemoveFlight).toHaveBeenCalled();
+  it("calls onRemoveFlight and show the righ arrow if rotation is true", () => {
+    const propsWithRotation = { ...props, rotation: true };
+    const wrapperWithRotation = shallow(<Flight {...propsWithRotation} />);
+    const li = wrapperWithRotation.find("li");
+    const img = wrapperWithRotation.find("img");
+    li.simulate("click");
+    expect(propsWithRotation.onRemoveFlight).toHaveBeenCalled();
+    expect(img.length).toEqual(1);
   });
 });

@@ -18,16 +18,30 @@ describe("App", () => {
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  // it("calls onSelectApp if rotation is undefined", () => {
-  //   const li = wrapper.find("li");
-  //   li.simulate("doubleClick");
-  //   expect(props.onSelectApp).toHaveBeenCalled();
-  // });
-  // it("calls onRemoveApp if rotation is true", () => {
-  //   wrapper.setProps({ rotation: true });
-  //   const li = wrapper.find("li");
-  //   li.simulate("doubleClick");
-  //   expect(props.onRemoveApp).toHaveBeenCalled();
-  // });
+  it("calls setstate on selectAircraft", () => {
+    const airCraftsList = wrapper.find("AirCraftsList");
+    airCraftsList.simulate("selectAircraft");
+    expect(wrapper.state()).toEqual({
+      aircraftList: [],
+      fatalError: false,
+      flightsList: [],
+      flyingTimesList: [],
+      loading: true,
+      rotation: [],
+      selectedFlight: null
+    });
+  });
+  it("calls setstate on removeFlight", () => {
+    const flightsList = wrapper.find("FlightsList").at(0);
+    flightsList.simulate("removeFlight");
+    expect(wrapper.state()).toEqual({
+      aircraftList: [],
+      fatalError: false,
+      flightsList: [],
+      flyingTimesList: [],
+      loading: true,
+      rotation: [],
+      selectedFlight: undefined
+    });
+  });
 });

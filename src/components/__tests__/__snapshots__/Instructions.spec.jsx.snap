@@ -20,10 +20,13 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <p>
-          In the flights list, double click on a flight to add it to the rotation
+          Click on an aircraft to see its available flights.
         </p>,
         <p>
-          In the rotation, double click on a flight to remove it 
+          Click on a flight in the flights list to add it to the rotation.
+        </p>,
+        <p>
+          Click on flight in the rotation to remove it
         </p>,
       ],
       "className": "instructions",
@@ -35,10 +38,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "In the flights list, double click on a flight to add it to the rotation",
+          "children": "Click on an aircraft to see its available flights.",
         },
         "ref": null,
-        "rendered": "In the flights list, double click on a flight to add it to the rotation",
+        "rendered": "Click on an aircraft to see its available flights.",
         "type": "p",
       },
       Object {
@@ -46,10 +49,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "In the rotation, double click on a flight to remove it ",
+          "children": "Click on a flight in the flights list to add it to the rotation.",
         },
         "ref": null,
-        "rendered": "In the rotation, double click on a flight to remove it ",
+        "rendered": "Click on a flight in the flights list to add it to the rotation.",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Click on flight in the rotation to remove it",
+        },
+        "ref": null,
+        "rendered": "Click on flight in the rotation to remove it",
         "type": "p",
       },
     ],
@@ -63,10 +77,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <p>
-            In the flights list, double click on a flight to add it to the rotation
+            Click on an aircraft to see its available flights.
           </p>,
           <p>
-            In the rotation, double click on a flight to remove it 
+            Click on a flight in the flights list to add it to the rotation.
+          </p>,
+          <p>
+            Click on flight in the rotation to remove it
           </p>,
         ],
         "className": "instructions",
@@ -78,10 +95,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "In the flights list, double click on a flight to add it to the rotation",
+            "children": "Click on an aircraft to see its available flights.",
           },
           "ref": null,
-          "rendered": "In the flights list, double click on a flight to add it to the rotation",
+          "rendered": "Click on an aircraft to see its available flights.",
           "type": "p",
         },
         Object {
@@ -89,10 +106,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "In the rotation, double click on a flight to remove it ",
+            "children": "Click on a flight in the flights list to add it to the rotation.",
           },
           "ref": null,
-          "rendered": "In the rotation, double click on a flight to remove it ",
+          "rendered": "Click on a flight in the flights list to add it to the rotation.",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Click on flight in the rotation to remove it",
+          },
+          "ref": null,
+          "rendered": "Click on flight in the rotation to remove it",
           "type": "p",
         },
       ],

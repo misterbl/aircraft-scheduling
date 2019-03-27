@@ -14,6 +14,7 @@ ShallowWrapper {
           "origin": "origin",
           "readable_arrival": "readable_arrival",
           "readable_departure": "readable_departure",
+          "timePercentage": 23,
         },
       ]
     }
@@ -49,11 +50,12 @@ ShallowWrapper {
             <div
               aria-valuemax="100"
               aria-valuemin="0"
+              aria-valuenow={23}
               className="progress-bar bg-success"
               role="progressbar"
               style={
                 Object {
-                  "width": "undefined%",
+                  "width": "23%",
                 }
               }
             />
@@ -93,18 +95,19 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "23",
         "nodeType": "function",
         "props": Object {
           "children": Array [
             <div
               aria-valuemax="100"
               aria-valuemin="0"
+              aria-valuenow={23}
               className="progress-bar bg-success"
               role="progressbar"
               style={
                 Object {
-                  "width": "undefined%",
+                  "width": "23%",
                 }
               }
             />,
@@ -129,11 +132,11 @@ ShallowWrapper {
             "props": Object {
               "aria-valuemax": "100",
               "aria-valuemin": "0",
-              "aria-valuenow": undefined,
+              "aria-valuenow": 23,
               "className": "progress-bar bg-success",
               "role": "progressbar",
               "style": Object {
-                "width": "undefined%",
+                "width": "23%",
               },
             },
             "ref": null,
@@ -186,11 +189,12 @@ ShallowWrapper {
               <div
                 aria-valuemax="100"
                 aria-valuemin="0"
+                aria-valuenow={23}
                 className="progress-bar bg-success"
                 role="progressbar"
                 style={
                   Object {
-                    "width": "undefined%",
+                    "width": "23%",
                   }
                 }
               />
@@ -230,18 +234,19 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "23",
           "nodeType": "function",
           "props": Object {
             "children": Array [
               <div
                 aria-valuemax="100"
                 aria-valuemin="0"
+                aria-valuenow={23}
                 className="progress-bar bg-success"
                 role="progressbar"
                 style={
                   Object {
-                    "width": "undefined%",
+                    "width": "23%",
                   }
                 }
               />,
@@ -266,11 +271,11 @@ ShallowWrapper {
               "props": Object {
                 "aria-valuemax": "100",
                 "aria-valuemin": "0",
-                "aria-valuenow": undefined,
+                "aria-valuenow": 23,
                 "className": "progress-bar bg-success",
                 "role": "progressbar",
                 "style": Object {
-                  "width": "undefined%",
+                  "width": "23%",
                 },
               },
               "ref": null,

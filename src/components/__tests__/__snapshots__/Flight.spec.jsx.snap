@@ -61,7 +61,8 @@ ShallowWrapper {
           </div>
         </div>,
       ],
-      "onDoubleClick": [Function],
+      "className": "flight",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -237,7 +238,8 @@ ShallowWrapper {
             </div>
           </div>,
         ],
-        "onDoubleClick": [Function],
+        "className": "flight",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [

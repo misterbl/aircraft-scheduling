@@ -9,6 +9,7 @@ ShallowWrapper {
         "ident": "1234",
       }
     }
+    onSelectAircraft={[MockFunction]}
     totalAircraftUse={
       [MockFunction] {
         "calls": Array [
@@ -46,6 +47,7 @@ ShallowWrapper {
         </p>,
       ],
       "className": "text-center",
+      "onClick": [MockFunction],
     },
     "ref": null,
     "rendered": Array [
@@ -89,6 +91,7 @@ ShallowWrapper {
           </p>,
         ],
         "className": "text-center",
+        "onClick": [MockFunction],
       },
       "ref": null,
       "rendered": Array [
