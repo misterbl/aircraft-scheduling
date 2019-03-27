@@ -14,7 +14,7 @@ Users can click on flight in the rotation to remove it
 
 A 24h aircraft timeline is shown below the rotation table. Scheduled service in green, turnaround time in red, idle time in grey.
 
-The total usage of the specific aircraft for the 24h periode is also showed in percentage underneath the aircraft name
+The total usage of the specific aircraft for the 24h period is also showed in percentage underneath the aircraft's name
 
 The app uses:
 
