@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flight matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Flight
+    flight={
+      Object {
+        "destination": "destination",
+        "id": "1234",
+        "origin": "origin",
+        "readable_arrival": "readable_arrival",
+        "readable_departure": "readable_departure",
+      }
+    }
+    onRemoveFlight={[MockFunction]}
+    onSelectFlight={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p
+          className="text-center"
+        >
+          1234
+        </p>,
+        <div
+          className="d-flex justify-content-between"
+        >
+          <div
+            className="d-flex flex-column"
+          >
+            <p>
+              origin
+            </p>
+            <p>
+              readable_departure
+            </p>
+          </div>
+          <div
+            className="d-flex flex-column"
+          >
+            <p>
+              destination
+            </p>
+            <p>
+              readable_arrival
+            </p>
+          </div>
+        </div>,
+      ],
+      "onDoubleClick": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "1234",
+          "className": "text-center",
+        },
+        "ref": null,
+        "rendered": "1234",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="d-flex flex-column"
+            >
+              <p>
+                origin
+              </p>
+              <p>
+                readable_departure
+              </p>
+            </div>,
+            undefined,
+            <div
+              className="d-flex flex-column"
+            >
+              <p>
+                destination
+              </p>
+              <p>
+                readable_arrival
+              </p>
+            </div>,
+          ],
+          "className": "d-flex justify-content-between",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  origin
+                </p>,
+                <p>
+                  readable_departure
+                </p>,
+              ],
+              "className": "d-flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "origin",
+                },
+                "ref": null,
+                "rendered": "origin",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "readable_departure",
+                },
+                "ref": null,
+                "rendered": "readable_departure",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  destination
+                </p>,
+                <p>
+                  readable_arrival
+                </p>,
+              ],
+              "className": "d-flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "destination",
+                },
+                "ref": null,
+                "rendered": "destination",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "readable_arrival",
+                },
+                "ref": null,
+                "rendered": "readable_arrival",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "li",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p
+            className="text-center"
+          >
+            1234
+          </p>,
+          <div
+            className="d-flex justify-content-between"
+          >
+            <div
+              className="d-flex flex-column"
+            >
+              <p>
+                origin
+              </p>
+              <p>
+                readable_departure
+              </p>
+            </div>
+            <div
+              className="d-flex flex-column"
+            >
+              <p>
+                destination
+              </p>
+              <p>
+                readable_arrival
+              </p>
+            </div>
+          </div>,
+        ],
+        "onDoubleClick": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "1234",
+            "className": "text-center",
+          },
+          "ref": null,
+          "rendered": "1234",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="d-flex flex-column"
+              >
+                <p>
+                  origin
+                </p>
+                <p>
+                  readable_departure
+                </p>
+              </div>,
+              undefined,
+              <div
+                className="d-flex flex-column"
+              >
+                <p>
+                  destination
+                </p>
+                <p>
+                  readable_arrival
+                </p>
+              </div>,
+            ],
+            "className": "d-flex justify-content-between",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    origin
+                  </p>,
+                  <p>
+                    readable_departure
+                  </p>,
+                ],
+                "className": "d-flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "origin",
+                  },
+                  "ref": null,
+                  "rendered": "origin",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "readable_departure",
+                  },
+                  "ref": null,
+                  "rendered": "readable_departure",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    destination
+                  </p>,
+                  <p>
+                    readable_arrival
+                  </p>,
+                ],
+                "className": "d-flex flex-column",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "destination",
+                  },
+                  "ref": null,
+                  "rendered": "destination",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "readable_arrival",
+                  },
+                  "ref": null,
+                  "rendered": "readable_arrival",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "li",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

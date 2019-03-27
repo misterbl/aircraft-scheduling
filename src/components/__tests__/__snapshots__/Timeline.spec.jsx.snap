@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Timeline
+    flyingTimesList={
+      Array [
+        Object {
+          "arrivaltime": 2500,
+          "departuretime": 1233,
+          "destination": "destination",
+          "id": "1234",
+          "origin": "origin",
+          "readable_arrival": "readable_arrival",
+          "readable_departure": "readable_departure",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          aria-valuemax="100"
+          aria-valuemin="0"
+          aria-valuenow={1.4270833333333333}
+          role="progressbar"
+          style={
+            Object {
+              "width": "1.4270833333333333%",
+            }
+          }
+        />,
+        Array [
+          <React.Fragment>
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              className="progress-bar bg-success"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "undefined%",
+                }
+              }
+            />
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "undefined%",
+                }
+              }
+            />
+          </React.Fragment>,
+        ],
+      ],
+      "className": "progress",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1.4270833333333333",
+        "nodeType": "host",
+        "props": Object {
+          "aria-valuemax": "100",
+          "aria-valuemin": "0",
+          "aria-valuenow": 1.4270833333333333,
+          "role": "progressbar",
+          "style": Object {
+            "width": "1.4270833333333333%",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              className="progress-bar bg-success"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "undefined%",
+                }
+              }
+            />,
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              role="progressbar"
+              style={
+                Object {
+                  "width": "undefined%",
+                }
+              }
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-valuemax": "100",
+              "aria-valuemin": "0",
+              "aria-valuenow": undefined,
+              "className": "progress-bar bg-success",
+              "role": "progressbar",
+              "style": Object {
+                "width": "undefined%",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "aria-valuemax": "100",
+              "aria-valuemin": "0",
+              "aria-valuenow": undefined,
+              "role": "progressbar",
+              "style": Object {
+                "width": "undefined%",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": Symbol(react.fragment),
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow={1.4270833333333333}
+            role="progressbar"
+            style={
+              Object {
+                "width": "1.4270833333333333%",
+              }
+            }
+          />,
+          Array [
+            <React.Fragment>
+              <div
+                aria-valuemax="100"
+                aria-valuemin="0"
+                className="progress-bar bg-success"
+                role="progressbar"
+                style={
+                  Object {
+                    "width": "undefined%",
+                  }
+                }
+              />
+              <div
+                aria-valuemax="100"
+                aria-valuemin="0"
+                role="progressbar"
+                style={
+                  Object {
+                    "width": "undefined%",
+                  }
+                }
+              />
+            </React.Fragment>,
+          ],
+        ],
+        "className": "progress",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1.4270833333333333",
+          "nodeType": "host",
+          "props": Object {
+            "aria-valuemax": "100",
+            "aria-valuemin": "0",
+            "aria-valuenow": 1.4270833333333333,
+            "role": "progressbar",
+            "style": Object {
+              "width": "1.4270833333333333%",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <div
+                aria-valuemax="100"
+                aria-valuemin="0"
+                className="progress-bar bg-success"
+                role="progressbar"
+                style={
+                  Object {
+                    "width": "undefined%",
+                  }
+                }
+              />,
+              <div
+                aria-valuemax="100"
+                aria-valuemin="0"
+                role="progressbar"
+                style={
+                  Object {
+                    "width": "undefined%",
+                  }
+                }
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-valuemax": "100",
+                "aria-valuemin": "0",
+                "aria-valuenow": undefined,
+                "className": "progress-bar bg-success",
+                "role": "progressbar",
+                "style": Object {
+                  "width": "undefined%",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "aria-valuemax": "100",
+                "aria-valuemin": "0",
+                "aria-valuenow": undefined,
+                "role": "progressbar",
+                "style": Object {
+                  "width": "undefined%",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": Symbol(react.fragment),
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

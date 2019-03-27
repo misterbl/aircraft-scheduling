@@ -1,0 +1,367 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlightsList matches the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <FlightsList
+    flightsList={
+      Array [
+        Object {
+          "destination": "destination",
+          "id": "1234",
+          "origin": "origin",
+          "readable_arrival": "readable_arrival",
+          "readable_departure": "readable_departure",
+        },
+      ]
+    }
+    onRemoveFlight={[MockFunction]}
+    onSelectFlight={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Flights
+        </h3>,
+        <div
+          className="container mw-250 mn-250"
+        >
+          <ul
+            className="d-flex flex-column"
+          >
+            <React.Fragment>
+              <Flight
+                flight={
+                  Object {
+                    "destination": "destination",
+                    "id": "1234",
+                    "origin": "origin",
+                    "readable_arrival": "readable_arrival",
+                    "readable_departure": "readable_departure",
+                  }
+                }
+                onRemoveFlight={[MockFunction]}
+                onSelectFlight={[MockFunction]}
+                usage="%used"
+              />
+            </React.Fragment>
+          </ul>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Flights",
+        },
+        "ref": null,
+        "rendered": "Flights",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <ul
+            className="d-flex flex-column"
+          >
+            <React.Fragment>
+              <Flight
+                flight={
+                  Object {
+                    "destination": "destination",
+                    "id": "1234",
+                    "origin": "origin",
+                    "readable_arrival": "readable_arrival",
+                    "readable_departure": "readable_departure",
+                  }
+                }
+                onRemoveFlight={[MockFunction]}
+                onSelectFlight={[MockFunction]}
+                usage="%used"
+              />
+            </React.Fragment>
+          </ul>,
+          "className": "container mw-250 mn-250",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <React.Fragment>
+                <Flight
+                  flight={
+                    Object {
+                      "destination": "destination",
+                      "id": "1234",
+                      "origin": "origin",
+                      "readable_arrival": "readable_arrival",
+                      "readable_departure": "readable_departure",
+                    }
+                  }
+                  onRemoveFlight={[MockFunction]}
+                  onSelectFlight={[MockFunction]}
+                  usage="%used"
+                />
+              </React.Fragment>,
+            ],
+            "className": "d-flex flex-column",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Flight
+                  flight={
+                    Object {
+                      "destination": "destination",
+                      "id": "1234",
+                      "origin": "origin",
+                      "readable_arrival": "readable_arrival",
+                      "readable_departure": "readable_departure",
+                    }
+                  }
+                  onRemoveFlight={[MockFunction]}
+                  onSelectFlight={[MockFunction]}
+                  usage="%used"
+                />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": "1234",
+                "nodeType": "class",
+                "props": Object {
+                  "flight": Object {
+                    "destination": "destination",
+                    "id": "1234",
+                    "origin": "origin",
+                    "readable_arrival": "readable_arrival",
+                    "readable_departure": "readable_departure",
+                  },
+                  "onRemoveFlight": [MockFunction],
+                  "onSelectFlight": [MockFunction],
+                  "rotation": undefined,
+                  "usage": "%used",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": Symbol(react.fragment),
+            },
+          ],
+          "type": "ul",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Flights
+          </h3>,
+          <div
+            className="container mw-250 mn-250"
+          >
+            <ul
+              className="d-flex flex-column"
+            >
+              <React.Fragment>
+                <Flight
+                  flight={
+                    Object {
+                      "destination": "destination",
+                      "id": "1234",
+                      "origin": "origin",
+                      "readable_arrival": "readable_arrival",
+                      "readable_departure": "readable_departure",
+                    }
+                  }
+                  onRemoveFlight={[MockFunction]}
+                  onSelectFlight={[MockFunction]}
+                  usage="%used"
+                />
+              </React.Fragment>
+            </ul>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Flights",
+          },
+          "ref": null,
+          "rendered": "Flights",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <ul
+              className="d-flex flex-column"
+            >
+              <React.Fragment>
+                <Flight
+                  flight={
+                    Object {
+                      "destination": "destination",
+                      "id": "1234",
+                      "origin": "origin",
+                      "readable_arrival": "readable_arrival",
+                      "readable_departure": "readable_departure",
+                    }
+                  }
+                  onRemoveFlight={[MockFunction]}
+                  onSelectFlight={[MockFunction]}
+                  usage="%used"
+                />
+              </React.Fragment>
+            </ul>,
+            "className": "container mw-250 mn-250",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <React.Fragment>
+                  <Flight
+                    flight={
+                      Object {
+                        "destination": "destination",
+                        "id": "1234",
+                        "origin": "origin",
+                        "readable_arrival": "readable_arrival",
+                        "readable_departure": "readable_departure",
+                      }
+                    }
+                    onRemoveFlight={[MockFunction]}
+                    onSelectFlight={[MockFunction]}
+                    usage="%used"
+                  />
+                </React.Fragment>,
+              ],
+              "className": "d-flex flex-column",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Flight
+                    flight={
+                      Object {
+                        "destination": "destination",
+                        "id": "1234",
+                        "origin": "origin",
+                        "readable_arrival": "readable_arrival",
+                        "readable_departure": "readable_departure",
+                      }
+                    }
+                    onRemoveFlight={[MockFunction]}
+                    onSelectFlight={[MockFunction]}
+                    usage="%used"
+                  />,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": "1234",
+                  "nodeType": "class",
+                  "props": Object {
+                    "flight": Object {
+                      "destination": "destination",
+                      "id": "1234",
+                      "origin": "origin",
+                      "readable_arrival": "readable_arrival",
+                      "readable_departure": "readable_departure",
+                    },
+                    "onRemoveFlight": [MockFunction],
+                    "onSelectFlight": [MockFunction],
+                    "rotation": undefined,
+                    "usage": "%used",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": Symbol(react.fragment),
+              },
+            ],
+            "type": "ul",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
