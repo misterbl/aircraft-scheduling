@@ -32,11 +32,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         false,
-        <img
-          alt="loading indicator"
-          className="loading-indicator"
-          src="planeGif.gif"
-        />,
+        false,
         <div
           className="d-inline-block"
         >
@@ -84,19 +80,7 @@ ShallowWrapper {
     "ref": null,
     "rendered": Array [
       false,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "loading indicator",
-          "className": "loading-indicator",
-          "src": "planeGif.gif",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -268,11 +252,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           false,
-          <img
-            alt="loading indicator"
-            className="loading-indicator"
-            src="planeGif.gif"
-          />,
+          false,
           <div
             className="d-inline-block"
           >
@@ -320,19 +300,7 @@ ShallowWrapper {
       "ref": null,
       "rendered": Array [
         false,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "alt": "loading indicator",
-            "className": "loading-indicator",
-            "src": "planeGif.gif",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "img",
-        },
+        false,
         Object {
           "instance": null,
           "key": undefined,

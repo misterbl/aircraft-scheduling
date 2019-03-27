@@ -5,11 +5,11 @@ import FlightsList from "./components/FlightsList";
 import TImeline from "./components/Timeline";
 import sortArray from "./sortArray";
 import { calculatePercentage } from "./utils";
-import { TURNAROUND } from "./const";
+import { TURNAROUND, flightsUrl, aircraftsUrl } from "./const";
 import planeGif from "./assets/planeGif.gif";
 import infoIcon from "./assets/information.svg";
 import Instructions from "./components/Instructions";
-
+import fetch from "node-fetch";
 class App extends Component {
   state = {
     aircraftList: [],
@@ -28,9 +28,7 @@ class App extends Component {
   getAircrafts = async () => {
     this.setState({ loading: true });
     try {
-      const response = await fetch(
-        "https://infinite-dawn-93085.herokuapp.com/aircrafts"
-      );
+      const response = await fetch(aircraftsUrl);
       const json = await response.json();
       const aircraftList = json.data;
       this.setState({ loading: false, aircraftList });
@@ -44,9 +42,7 @@ class App extends Component {
   onSelectAircraft = async () => {
     this.setState({ loading: true });
     try {
-      const response = await fetch(
-        "https://infinite-dawn-93085.herokuapp.com/flights"
-      );
+      const response = await fetch(flightsUrl);
       const json = await response.json();
       const result = json.data;
       const flightsList = await sortArray(result, "origin");

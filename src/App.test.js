@@ -1,7 +1,14 @@
 import * as React from "react";
 import { shallow } from "enzyme";
+import fetch from "node-fetch";
 import App from "./App";
+import { flightsUrl, aircraftsUrl } from "./const";
 
+jest.mock("node-fetch", () =>
+  jest.fn(() =>
+    Promise.resolve({ ok: true, json: () => Promise.resolve({ data: [] }) })
+  )
+);
 describe("App", () => {
   const props = {
     App: {
@@ -18,6 +25,9 @@ describe("App", () => {
   it("matches the snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
+  it("calls fetch on componenDidMount", () => {
+    expect(fetch).toHaveBeenCalledWith(aircraftsUrl);
+  });
   it("calls setstate on selectAircraft", () => {
     const airCraftsList = wrapper.find("AirCraftsList");
     airCraftsList.simulate("selectAircraft");
@@ -30,6 +40,11 @@ describe("App", () => {
       rotation: [],
       selectedFlight: null
     });
+  });
+  it("calls fetch on selectAircraft", () => {
+    const airCraftsList = wrapper.find("AirCraftsList");
+    airCraftsList.simulate("selectAircraft");
+    expect(fetch).toHaveBeenCalledWith(flightsUrl);
   });
   it("calls setstate on removeFlight", () => {
     const flightsList = wrapper.find("FlightsList").at(0);
